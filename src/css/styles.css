@@ -1,0 +1,252 @@
+/* custom properties */
+:root {
+    --color-texto-claro: white;
+    --color-texto-oscuro: rgb(93, 95, 121);
+    --color-verde: rgb(141, 135, 65);
+    --color-azul: rgb(101, 157, 189);
+    --color-azul-transparente: rgba(101, 157, 189, 0.8);
+    --color-beige: rgb(239, 213, 183);
+    --color-marron: rgb(188, 152, 106);
+    --color-amarillo: rgb(251, 238, 193);
+}
+
+/*
+Responsive breakpoints for viewports:
+    Pequeño ( < 720px < ) Mediano ( < 1420px < ) Grande
+*/
+
+/* estilos generales */
+body {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+    color: var(--color-texto-oscuro);
+}
+
+a {
+    color: var(--color-beige);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1,
+h2 {
+    text-align: center;
+    margin: 0;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+h1 {
+    font-size: 46px;
+}
+
+figure {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.pequeno {
+    font-size: 14px;
+}
+
+/* cabecera */
+header {
+    width: 100%;
+    background-color: var(--color-azul);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+header .logo {
+    font-size: 46px;
+    font-family: 'Passion One', Arial, sans-serif;
+    letter-spacing: 6px;
+    margin: 20px 0;
+    border-bottom: 6px dotted var(--color-beige);
+}
+
+header .logo img {
+    height: 60px;
+    width: 60px;
+}
+
+/* navegación */
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav li {
+    margin-bottom: 10px;
+    font-weight: 900;
+    font-size: 24px;
+    color: var(--color-beige);
+    letter-spacing: 2px;
+}
+
+nav li:last-child {
+    margin-bottom: 0;
+}
+
+nav a {
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 700;
+    letter-spacing: initial;
+}
+
+nav a:hover {
+    background-color: var(--color-marron);
+    text-decoration: none;
+}
+
+@media (min-width: 720px) {
+    nav ul {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    nav li {
+        margin-bottom: 0;
+    }
+
+    nav li::after {
+        content: "·";
+        margin: 0 8px;
+    }
+
+    nav li:last-child::after {
+        content: none;
+        margin: 0;
+    }
+}
+
+/* pie */
+footer {
+    width: 100%;
+    background-color: var(--color-azul);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--color-texto-claro);
+}
+
+footer p {
+    margin:5px 0;
+}
+
+footer .logo {
+    margin: 20px 0;
+    padding-top:10px;
+    border-top: 6px dotted var(--color-beige);
+}
+
+/* main */
+main {
+    padding: 40px 0;
+    margin: 0 auto;
+}
+
+main>section {
+    margin: 0 15px 50px 15px;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    margin: 5px 0 10px 0;
+}
+
+main p {
+    line-height: 26px;
+}
+
+@media (min-width: 720px) {
+    main {
+        width: 80%;
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1420px) {
+    main {
+        width: 1288px;
+    }
+}
+
+/* específico index.html */
+#portada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../img/portada.jpg");
+    background-position: center;
+    background-size: cover;
+    color: var(--color-texto-claro);
+}
+
+#portada #logo {
+    background-image: url("../img/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: min(100%, 300px);
+    height: min(100%, 350px);
+}
+
+#portada .logo-externo {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#portada main {
+    text-align: center;
+    background-color: var(--color-azul-transparente);
+    padding: 20px;
+    max-width: 80%;
+}
+
+@media (min-width: 720px) {
+    #portada main {
+        max-width: 570px;
+    }
+}
+
+
+
+/* específico abc.html */
+
+/* específico abc.html */
+
+/* específico abc.html */
