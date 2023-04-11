@@ -33,18 +33,26 @@ a:hover {
 }
 
 h1,
-h2 {
-    text-align: center;
+h2,
+h3 {
     margin: 0;
     font-weight: 900;
 }
 
 h1 {
-    font-size: 54px;
+    font-size: 46px;
+    text-align: center;
 }
 
-h1 {
-    font-size: 46px;
+h2 {
+    font-size: 26px;
+    text-align: left;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
 }
 
 figure {
@@ -134,6 +142,10 @@ main>section {
 main img {
     max-width: 100%;
     height: auto;
+    margin: 5px 0 10px 0;
+}
+
+main iframe {
     margin: 5px 0 10px 0;
 }
 
@@ -269,7 +281,7 @@ nav a:hover {
     flex-direction: column;
 }
 
-#categoria ul {
+ul#lista-enlaces {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -278,7 +290,7 @@ nav a:hover {
     margin-bottom: 40px;
 }
 
-#categoria li:not(:first-child)::before {
+#lista-enlaces li:not(:first-child)::before {
     content: "·";
     margin: 0 8px;
     color: var(--color-marron);
@@ -314,11 +326,6 @@ nav a:hover {
 #categoria .mediano {
     font-weight: 800;
     font-size: 14px;
-}
-
-#categoria h2 {
-    text-align: left;
-    font-size: 26px;
 }
 
 #categoria .flex-card img {
@@ -394,6 +401,30 @@ nav a:hover {
     }
 }
 
-/* específico abc.html */
+/* específico enlaces.html */
+dt {
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: 30px;
+}
 
-/* específico abc.html */
+dt::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: var(--color-amarillo);
+}
+
+dd {
+    font-size: 14px;
+    margin-left: 30px;
+    color: var(--text-color);
+}
+
+dd::before {
+    content: "·";
+    margin-right: 5px;
+}
+
