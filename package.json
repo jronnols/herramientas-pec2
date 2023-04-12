@@ -20,5 +20,8 @@
   },
   "browserslist": [
     "last 2 versions, not dead, > 0.2%"
-  ]
+  ],
+  "dependencies": {
+    "sweetalert2": "^11.7.3"
+  }
 }

@@ -73,6 +73,17 @@ ul {
     margin: 0;
 }
 
+button {
+    text-transform: uppercase;
+    background-color: var(--color-amarillo);
+    border: 1px solid var(--color-marron);
+    color: var(--color-texto-oscuro);
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: inherit;
+}
+
 .pequeno {
     font-size: 14px;
 }
