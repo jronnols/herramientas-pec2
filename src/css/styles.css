@@ -2,7 +2,6 @@
 :root {
     --color-texto-claro: white;
     --color-texto-oscuro: rgb(93, 95, 121);
-    --color-verde: rgb(141, 135, 65);
     --color-azul: rgb(101, 157, 189);
     --color-azul-transparente: rgba(101, 157, 189, 0.8);
     --color-beige: rgb(239, 213, 183);
