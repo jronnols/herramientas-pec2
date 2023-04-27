@@ -22,6 +22,6 @@
     "last 5 versions, > 0.2%, not dead"
   ],
   "dependencies": {
-    "sweetalert2": "^11.7.3"
+    "sweetalert2": "^11.4.8"
   }
 }
