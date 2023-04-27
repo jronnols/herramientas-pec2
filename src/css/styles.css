@@ -301,9 +301,11 @@ ul#lista-enlaces {
 }
 
 #lista-enlaces li:not(:first-child)::before {
-    content: "·";
+    content: "|";
     margin: 0 8px;
     color: var(--color-marron);
+    font-size: 12px;
+    font-weight: normal;
 }
 
 #categoria .flex-card {
@@ -411,6 +413,20 @@ ul#lista-enlaces {
     }
 }
 
+/* específico detalle*.html */
+.lista-elementos li {
+    margin-left: 30px;
+}
+
+.lista-elementos li::before {
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+    margin-right: 10px;
+    background-color: var(--color-amarillo);
+}
+
 /* específico enlaces.html */
 dt {
     font-weight: 700;
@@ -437,4 +453,3 @@ dd::before {
     content: "·";
     margin-right: 5px;
 }
-
