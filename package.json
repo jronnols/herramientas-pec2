@@ -1,7 +1,7 @@
 {
-  "name": "herramientas-pec1",
+  "name": "herramientas-pec2",
   "version": "1.0.0",
-  "description": "PEC1 - Herramientas HTML y CSS",
+  "description": "PEC2 - Herramientas HTML y CSS",
   "source": "src/index.html",
   "scripts": {
     "start": "npm-run-all clean parcel:dev",
