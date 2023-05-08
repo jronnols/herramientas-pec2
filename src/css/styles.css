@@ -72,7 +72,7 @@ ul {
     margin: 0;
 }
 
-button {
+main button {
     text-transform: uppercase;
     background-color: var(--color-amarillo);
     border: 1px solid var(--color-marron);
@@ -81,7 +81,20 @@ button {
     font-size: 16px;
     font-weight: normal;
     font-family: inherit;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+
 }
+
+main button:hover,
+main button:focus {
+    border-color: var(--color-amarillo);
+    color: var(--color-amarillo);
+    background-color: var(--color-marron);
+    border-radius: 15px;
+}
+
 
 .pequeno {
     font-size: 14px;
@@ -196,7 +209,6 @@ nav ul {
 nav li {
     margin-bottom: 10px;
     font-weight: 900;
-    font-size: 24px;
     color: var(--color-beige);
     letter-spacing: 2px;
 }
@@ -215,6 +227,18 @@ nav a {
 
 nav a:hover {
     background-color: var(--color-marron);
+}
+
+header nav li {
+    font-size: 24px;
+}
+
+footer nav li {
+    font-size: 16px;
+}
+
+footer nav {
+    margin-bottom: 10px;
 }
 
 @media (min-width: 720px) {
@@ -254,27 +278,69 @@ nav a:hover {
     color: var(--color-texto-claro);
 }
 
-#portada #logo {
-    background-image: url("../img/logo.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    width: min(100%, 300px);
-    height: min(100%, 350px);
-}
-
-#portada .logo-externo {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 #portada main {
     text-align: center;
     background-color: var(--color-azul-transparente);
     padding: 20px;
     max-width: 80%;
+}
+
+.clip {
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.balls-container {
+    height: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.balls-container .ball-animation:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.balls-container .ball-animation:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.balls-container .ball-animation:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.balls-container .ball-animation:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.balls-container .ball-animation:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.ball-animation {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--color-beige);
+    margin: 0 10px;
+    animation-duration: 1s;
+    animation-name: pulsation;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulsation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.7);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @media (min-width: 720px) {
