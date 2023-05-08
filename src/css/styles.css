@@ -289,60 +289,6 @@ footer nav {
     clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
 }
 
-.balls-container {
-    height: 25px;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-flow: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.balls-container .ball-animation:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.balls-container .ball-animation:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.balls-container .ball-animation:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.balls-container .ball-animation:nth-child(4) {
-    animation-delay: 0.6s;
-}
-
-.balls-container .ball-animation:nth-child(5) {
-    animation-delay: 0.8s;
-}
-
-.ball-animation {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: var(--color-beige);
-    margin: 0 10px;
-    animation-duration: 1s;
-    animation-name: pulsation;
-    animation-iteration-count: infinite;
-}
-
-@keyframes pulsation {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(0.7);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
 @media (min-width: 720px) {
     #portada main {
         max-width: 570px;
@@ -493,6 +439,18 @@ ul#lista-enlaces {
     background-color: var(--color-amarillo);
 }
 
+.flex-escudo {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 720px) {
+    .flex-escudo {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
 /* específico enlaces.html */
 dt {
     font-weight: 700;
@@ -518,4 +476,116 @@ dd {
 dd::before {
     content: "·";
     margin-right: 5px;
+}
+
+/* animaciones */
+.balls-container {
+    height: 25px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.balls-container .ball-animation:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.balls-container .ball-animation:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.balls-container .ball-animation:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.balls-container .ball-animation:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.balls-container .ball-animation:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.ball-animation {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: var(--color-beige);
+    margin: 0 10px;
+    animation-duration: 1s;
+    animation-name: pulsation;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pulsation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.7);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* animación escudo */
+#escudo .move-down-fast {
+    animation: moveDown 1s alternate steps(5, end) infinite;
+}
+
+#escudo .move-up-fast {
+    animation: moveUp 1s alternate steps(5, end) infinite;
+}
+
+#escudo .move-up-slow {
+    animation: moveUp 3s alternate steps(5, end) infinite;
+
+}
+
+@keyframes moveDown {
+    0% {
+        transform: translate(0, 0%);
+    }
+
+    50% {
+        transform: translate(0, 1%);
+    }
+
+    100% {
+        transform: translate(0, 0%);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translate(0, 0%);
+    }
+
+    50% {
+        transform: translate(0, -0.5%);
+    }
+
+    100% {
+        transform: translate(0, 0%);
+    }
+}
+
+@keyframes openShut {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1, 0.1);
+        transform-origin: left top;
+    }
+
+    100% {
+        transform: scale(1, 1);
+    }
 }
