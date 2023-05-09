@@ -162,7 +162,8 @@ main>section {
     margin: 0 15px 50px 15px;
 }
 
-main img {
+main img,
+main svg {
     max-width: 100%;
     height: auto;
     margin: 5px 0 10px 0;
@@ -441,13 +442,23 @@ ul#lista-enlaces {
 
 .flex-escudo {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+}
+
+#escudo {
+    width: 200px;
 }
 
 @media (min-width: 720px) {
     .flex-escudo {
         display: flex;
         flex-direction: row;
+        column-gap: 10px;
+    }
+
+    #escudo {
+        width: 310px;
+        max-width: 310px;
     }
 }
 
@@ -535,15 +546,15 @@ dd::before {
 
 /* animación escudo */
 #escudo .move-down-fast {
-    animation: moveDown 1s alternate steps(5, end) infinite;
+    animation: moveDown 1s alternate steps(10, end) infinite;
 }
 
 #escudo .move-up-fast {
-    animation: moveUp 1s alternate steps(5, end) infinite;
+    animation: moveUp 1s alternate steps(10, end) infinite;
 }
 
 #escudo .move-up-slow {
-    animation: moveUp 3s alternate steps(5, end) infinite;
+    animation: moveUp 3s alternate steps(30, end) infinite;
 
 }
 
@@ -552,7 +563,15 @@ dd::before {
         transform: translate(0, 0%);
     }
 
+    25% {
+        transform: translate(0, 1%);
+    }
+
     50% {
+        transform: translate(0, 0%);
+    }
+
+    85% {
         transform: translate(0, 1%);
     }
 
@@ -566,26 +585,19 @@ dd::before {
         transform: translate(0, 0%);
     }
 
+    25% {
+        transform: translate(0, -0.5%);
+    }
+
     50% {
+        transform: translate(0, 0%);
+    }
+
+    85% {
         transform: translate(0, -0.5%);
     }
 
     100% {
         transform: translate(0, 0%);
-    }
-}
-
-@keyframes openShut {
-    0% {
-        transform: scale(1, 1);
-    }
-
-    50% {
-        transform: scale(1, 0.1);
-        transform-origin: left top;
-    }
-
-    100% {
-        transform: scale(1, 1);
     }
 }
