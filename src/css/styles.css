@@ -84,7 +84,6 @@ main button {
     transition-property: all;
     transition-duration: 0.3s;
     transition-timing-function: ease-out;
-
 }
 
 main button:hover,
@@ -124,8 +123,17 @@ header .logo img {
     width: 60px;
 }
 
+#portada a,
+header a,
+footer a {
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
 #portada a:hover,
-header a:hover {
+header a:hover,
+footer a:hover {
     text-decoration: none;
 }
 
