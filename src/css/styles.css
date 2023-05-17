@@ -281,7 +281,7 @@ footer nav {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url("../img/portada.jpg");
+    background-image: url("../img/portada.jpg?height=1028");
     background-position: center;
     background-size: cover;
     color: var(--color-texto-claro);
@@ -299,11 +299,20 @@ footer nav {
 }
 
 @media (min-width: 720px) {
+    #portada {
+        background-image: url("../img/portada.jpg?height=2048");
+    }
+
     #portada main {
         max-width: 570px;
     }
 }
 
+@media (min-width: 1420px) {
+    #portada {
+        background-image: url("../img/portada.jpg");
+    }
+}
 
 /* específico categoria.html */
 #categoria .flex-section {
