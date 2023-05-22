@@ -2,10 +2,10 @@
 :root {
     --color-texto-claro: white;
     --color-texto-oscuro: rgb(93, 95, 121);
-    --color-azul: rgb(101, 157, 189);
-    --color-azul-transparente: rgba(101, 157, 189, 0.8);
+    --color-azul: rgb(55, 98, 129);
+    --color-azul-transparente: rgba(55, 98, 129, 0.7);
     --color-beige: rgb(239, 213, 183);
-    --color-marron: rgb(188, 152, 106);
+    --color-marron: rgb(148, 110, 66);
     --color-amarillo: rgb(251, 238, 193);
 }
 
@@ -292,6 +292,7 @@ footer nav {
     background-color: var(--color-azul-transparente);
     padding: 20px;
     max-width: 80%;
+    border-radius: 10px;
 }
 
 .clip {
@@ -359,7 +360,6 @@ ul#lista-enlaces {
 }
 
 #categoria .numero {
-    color: var(--color-beige);
     font-size: 54px;
     font-weight: 800;
     line-height: normal;
@@ -561,7 +561,7 @@ dd::before {
     }
 }
 
-/* animación escudo */
+/* animación escudo svg */
 #escudo .move-down-fast {
     animation: moveDown 1s alternate steps(10, end) infinite;
 }
@@ -571,50 +571,49 @@ dd::before {
 }
 
 #escudo .move-up-slow {
-    animation: moveUp 3s alternate steps(30, end) infinite;
+    animation: moveUp 2s alternate steps(20, end) infinite;
+}
 
+#escudo #fondo {
+    animation: fade 10s alternate steps(50, end) infinite;
 }
 
 @keyframes moveDown {
-    0% {
-        transform: translate(0, 0%);
-    }
 
-    25% {
-        transform: translate(0, 1%);
-    }
-
-    50% {
-        transform: translate(0, 0%);
-    }
-
-    85% {
-        transform: translate(0, 1%);
-    }
-
+    0%,
+    50%,
     100% {
         transform: translate(0, 0%);
+    }
+
+    25%,
+    85% {
+        transform: translate(0, 1%);
     }
 }
 
 @keyframes moveUp {
-    0% {
+
+    0%,
+    50%,
+    100% {
         transform: translate(0, 0%);
     }
 
-    25% {
-        transform: translate(0, -0.5%);
-    }
-
-    50% {
-        transform: translate(0, 0%);
-    }
-
+    25%,
     85% {
         transform: translate(0, -0.5%);
     }
+}
 
+@keyframes fade {
+
+    0%,
     100% {
-        transform: translate(0, 0%);
+        fill: #003d8f;
+    }
+
+    50% {
+        fill: var(--color-marron);
     }
 }
